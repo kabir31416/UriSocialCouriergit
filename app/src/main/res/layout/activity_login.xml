@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:paddingTop="10dp"
+android:orientation="vertical">
+
+
+<ImageView
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:src="@drawable/urilogo"
+    android:layout_gravity="center"/>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:weightSum="2"
+    android:padding="30dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="2dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="#086471"
+        android:fontFamily="@font/mont"
+        android:layout_gravity="start"
+        android:textSize="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"/>
+
+
+    <EditText
+        android:id="@+id/emailOrPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Email or Mobile"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:textSize="16sp"
+        android:textColor="#222222"
+        android:background="@drawable/rounded_edittext" />
+
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/ic_pass"
+        android:drawablePadding="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:textSize="16sp"
+        android:textColor="#222222"
+        android:background="@drawable/rounded_edittext" />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="#086471"
+        android:fontFamily="@font/mont"
+        android:paddingVertical="12dp"
+        style="@style/Widget.MaterialComponents.Button"
+        app:iconPadding="8dp"
+        app:elevation="4dp"
+        />
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="2"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dont't Have an account? "
+            android:textSize="16sp"
+            android:textColor="#333"
+            android:lineSpacingExtra="6dp"
+            />
+        <TextView
+            android:id="@+id/regpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="16sp"
+            android:textColor="#086471"
+            android:lineSpacingExtra="6dp"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/cardAddParcel"
+        android:src="@drawable/art"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+
+
+
+</LinearLayout>
+
+    </RelativeLayout>
+

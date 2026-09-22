@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <item android:title=" অ্যাপে আপনাকে স্বাগতম ">
+
+        <menu>
+            <group android:checkableBehavior="single">
+
+
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_home"
+                    android:title="Home" />
+
+                <item
+                    android:icon="@drawable/ic_admin"
+                    android:id="@+id/nav_about"
+                    android:title="ডেভলপার" />
+
+
+            </group>
+        </menu>
+
+    </item>
+
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/rateUs"
+            android:icon="@drawable/ic_admin"
+            android:title="Rate Us" />
+
+        <item
+            android:id="@+id/shar"
+            android:icon="@drawable/ic_qr"
+            android:title="Share" />
+
+    </group>
+
+
+
+</menu>

@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#f5f5f5"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView android:id="@+id/textUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="নাম:" />
+
+    <TextView android:id="@+id/textUserId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="আইডি:" />
+
+    <TextView android:id="@+id/textNID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NID:" />
+
+    <TextView android:id="@+id/textDOB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="জন্ম তারিখ:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnApprove"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Approve" />
+
+        <Button
+            android:id="@+id/btnReject"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Reject"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+</LinearLayout>

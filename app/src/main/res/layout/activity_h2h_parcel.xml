@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:background="?selectableItemBackground"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="#086471"/>
+
+                <TextView
+                    android:layout_marginStart="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mont"
+                    android:textColor="#086471"
+                    android:textSize="16sp"
+                    android:text="Add Parcel"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="#f3f9ff">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="Pickup Info"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:weightSum="2"
+                            android:gravity="center_vertical">
+
+                            <!-- Start Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="District"
+                                    android:textColor="#616161"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="4dp"/>
+
+                                <Spinner
+                                    android:id="@+id/PickupDistrict"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/spinner_background"
+                                    android:spinnerMode="dropdown"/>
+
+
+                            </LinearLayout>
+
+                            <!-- End Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginStart="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Thana"
+                                    android:textColor="#616161"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="4dp"/>
+
+                                <Spinner
+                                    android:id="@+id/PickupUpazila"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/spinner_background"
+                                    android:spinnerMode="dropdown"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+
+
+                            <EditText
+                                android:id="@+id/PickupAddress"
+                                android:hint="Pickup Address"
+                                android:drawablePadding="12dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_map"
+                                android:padding="10dp"
+                                android:textSize="14sp"
+                                android:background="@drawable/rounded_edittext" />
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="Delivery Info"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+
+
+                            <EditText
+                                android:id="@+id/etReceiverName"
+                                android:hint="Receiver Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="12dp"
+                                android:inputType="textPersonName"
+                                android:drawableStart="@drawable/ic_account"
+                                android:padding="10dp"
+                                android:textSize="14sp"
+                                android:background="@drawable/rounded_edittext"
+                                android:layout_marginBottom="8dp"/>
+
+                            <EditText
+                                android:id="@+id/etReceiverMobile"
+                                android:hint="Phone Mobile"
+                                android:drawablePadding="12dp"
+                                android:inputType="phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_call"
+                                android:padding="10dp"
+                                android:textSize="14sp"
+                                android:background="@drawable/rounded_edittext"
+                                android:layout_marginBottom="8dp"/>
+
+                            <EditText
+                                android:id="@+id/etAltMobile"
+                                android:hint="Alternative Phone Number"
+                                android:drawablePadding="12dp"
+                                android:inputType="phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_call"
+                                android:padding="10dp"
+                                android:textSize="14sp"
+                                android:background="@drawable/rounded_edittext"
+                                android:layout_marginBottom="8dp"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:weightSum="2"
+                            android:gravity="center_vertical">
+
+                            <!-- Start Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="District"
+                                    android:textColor="#616161"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="4dp"/>
+
+                                <Spinner
+                                    android:id="@+id/DeliveryDistrict"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/spinner_background"
+                                    android:spinnerMode="dropdown"/>
+
+
+                            </LinearLayout>
+
+                            <!-- End Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginStart="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Thana"
+                                    android:textColor="#616161"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="4dp"/>
+
+                                <Spinner
+                                    android:id="@+id/DeliveryUpazila"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/spinner_background"
+                                    android:spinnerMode="dropdown"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+
+                            <EditText
+                                android:id="@+id/DeliveryAddress"
+                                android:hint="Receiver Address"
+                                android:drawablePadding="12dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_map"
+                                android:padding="10dp"
+                                android:textSize="14sp"
+                                android:background="@drawable/rounded_edittext" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="Parcel Info"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Parcel Type"
+                                    android:textColor="#616161"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="4dp"/>
+
+                                <Spinner
+                                    android:id="@+id/spinnerptypes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/spinner_background"
+                                    android:padding="12dp"
+                                    android:spinnerMode="dropdown"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:weightSum="2"
+                            android:gravity="center_vertical">
+
+                            <!-- Start Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8dp">
+
+
+                                <EditText
+                                    android:id="@+id/etWeight"
+                                    android:hint="Weight (kg)"
+                                    android:inputType="numberDecimal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp"
+                                    android:textSize="14sp"
+                                    android:background="@drawable/spinner_background"
+                                    />
+                            </LinearLayout>
+
+                            <!-- End Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginStart="8dp">
+
+
+                                <EditText
+                                    android:id="@+id/etpv"
+                                    android:hint="Parcel Value"
+                                    android:inputType="numberDecimal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp"
+                                    android:textSize="14sp"
+                                    android:background="@drawable/spinner_background"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:weightSum="2"
+                            android:gravity="center_vertical">
+
+                            <!-- Start Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8dp">
+
+
+                                <EditText
+                                    android:id="@+id/etRdc"
+                                    android:hint="Delivery Charge"
+                                    android:inputType="numberDecimal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp"
+                                    android:textSize="14sp"
+                                    android:background="@drawable/spinner_background"
+                                    />
+                            </LinearLayout>
+
+                            <!-- End Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginStart="8dp">
+
+
+                                <EditText
+                                    android:id="@+id/etlot"
+                                    android:hint="Lot Count"
+                                    android:inputType="numberDecimal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp"
+                                    android:textSize="14sp"
+                                    android:background="@drawable/spinner_background"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <EditText
+                                android:id="@+id/etDescription"
+                                android:hint="Description:"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="12dp"
+                                android:drawableStart="@drawable/ic_note"
+                                android:padding="10dp"
+                                android:textSize="14sp"
+                                android:background="@drawable/rounded_edittext" />
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <EditText
+                                android:id="@+id/etSenderNote"
+                                android:hint="Note:"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="12dp"
+                                android:drawableStart="@drawable/ic_note"
+                                android:padding="10dp"
+                                android:textSize="14sp"
+                                android:background="@drawable/rounded_edittext" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSubmitParcel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Parcel"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#086471"
+                    android:paddingVertical="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    style="@style/Widget.MaterialComponents.Button"
+                    app:iconPadding="8dp"
+                    app:elevation="4dp" />
+
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

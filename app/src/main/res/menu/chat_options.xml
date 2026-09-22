@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_delete" android:title="Delete Chat" />
+    <item android:id="@+id/menu_block" android:title="Block User" />
+    <item android:id="@+id/menu_report" android:title="Report User" />
+</menu>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_500">#086471</color>
+    <color name="theme">#086471</color>
+    <color name="btnBgColor">#568995A4</color>
+
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#757575</color>
+
+</resources>

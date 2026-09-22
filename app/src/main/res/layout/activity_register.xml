@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start"
+                android:weightSum="2"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/urilogo"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/mont"
+                    android:textColor="#086471"
+                    android:text="Registration"
+                    android:textSize="25dp" />
+
+
+            </LinearLayout>
+
+            <!-- নাম -->
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Full Name"
+                android:drawablePadding="12dp"
+                android:inputType="textPersonName"
+                android:drawableStart="@drawable/ic_account"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginBottom="8dp"/>
+
+
+            <!-- জন্ম তারিখ -->
+            <EditText
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date of Birth (DD-MM-YYYY)"
+                android:drawableStart="@drawable/ic_date"
+                android:drawablePadding="12dp"
+                android:focusable="false"
+                android:clickable="true"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginBottom="8dp"/>
+
+
+            <!-- NID -->
+            <EditText
+                android:id="@+id/nid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter NID Number"
+                android:inputType="number"
+                android:drawableStart="@drawable/ic_nid"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginBottom="8dp"/>
+
+
+            <!-- মোবাইল -->
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Phone Number"
+                android:drawableStart="@drawable/ic_call"
+                android:drawablePadding="12dp"
+                android:inputType="phone"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- ইমেইল -->
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email "
+                android:drawablePadding="12dp"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_edittext"
+                android:drawableStart="@drawable/ic_email"
+                android:layout_marginBottom="8dp"/>
+
+
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:drawablePadding="12dp"
+                android:drawableStart="@drawable/ic_pass"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginBottom="8dp"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/registerBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:backgroundTint="#086471"
+                android:fontFamily="@font/mont"
+                android:paddingVertical="12dp"
+                style="@style/Widget.MaterialComponents.Button"
+                app:iconPadding="8dp"
+                app:elevation="4dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2"
+                android:gravity="center"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already Registered? "
+                    android:textSize="16sp"
+                    android:textColor="#333"
+                    android:lineSpacingExtra="6dp"
+                    />
+                <TextView
+                    android:id="@+id/loginpage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textSize="16sp"
+                    android:textColor="#086471"
+                    android:lineSpacingExtra="6dp"
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/cardAddParcel"
+                android:src="@drawable/art"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

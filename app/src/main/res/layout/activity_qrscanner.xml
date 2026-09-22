@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnScanQR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan QR Code" />
+
+    <TextView
+        android:id="@+id/tvParcelInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Parcel Info will appear here"
+        android:padding="16dp"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnApproveParcel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Approve Parcel"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnUpdateLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Location"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By accepting this request, you agree to the following:\n\n• You are responsible for delivering the parcel safely.\n• The proposed delivery charge (৳) is final.\n• Misuse or delay may lead to account suspension.\n• Communication with the sender should remain professional.\n\nPlease agree to proceed."
+            android:textSize="15sp"
+            android:paddingBottom="12dp" />
+
+        <CheckBox
+            android:id="@+id/cbAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I agree to the terms and conditions" />
+    </LinearLayout>
+</ScrollView>

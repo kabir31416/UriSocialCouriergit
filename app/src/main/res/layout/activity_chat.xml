@@ -1,0 +1,111 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:padding="10dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/ivBack"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="#086471"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/tvChatTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Chat"
+            android:textColor="#086471"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <ImageButton
+            android:id="@+id/btnCall"
+            android:src="@drawable/ic_call_pd"
+            android:layout_marginEnd="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:tint="#086471"/>
+
+        <ImageButton
+            android:id="@+id/btnOptions"
+            android:src="@drawable/ic_more"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="wrap_content"
+            android:tint="#086471"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0" />
+
+    <!-- Typing Indicator -->
+    <TextView
+        android:id="@+id/tvTypingStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:paddingStart="12dp"
+        android:visibility="gone"/>
+
+    <!-- Message List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMessages"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Input Area -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/btnMedia"
+            android:src="@drawable/ic_attach"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#086471"
+            android:layout_marginEnd="5dp"/>
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Write a message"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_edittext"/>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"/>
+
+    </LinearLayout>
+
+</LinearLayout>

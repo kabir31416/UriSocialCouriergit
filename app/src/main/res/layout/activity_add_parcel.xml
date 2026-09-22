@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:scrollbars="none"
+    android:fitsSystemWindows="true"
+android:background="@color/white">
+
+
+<com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/appBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:background="?selectableItemBackground"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="#086471"/>
+
+            <TextView
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mont"
+                android:textColor="#086471"
+                android:textSize="@dimen/_16ssp"
+                android:text="Add Parcel"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0" />
+
+</com.google.android.material.appbar.AppBarLayout>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_below="@+id/appBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:background="#f3f9ff">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/deliveryTypeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="Select Delivery Type"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alignmentMode="alignMargins"
+                            android:columnCount="4"
+                            android:padding="4dp"
+                            android:rowCount="3"
+                            android:useDefaultMargins="true">
+
+
+                            <!-- Internet Packs -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+                                <ImageView
+                                    android:id="@+id/homedeli"
+                                    android:contentDescription="Home Delivery"
+                                    android:src="@drawable/icon_hdeli"
+                                    android:background="@drawable/bg_unselected"
+                                    android:scaleType="centerInside"
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:padding="2dp"
+                                    android:layout_margin="2dp"/>
+
+                                <TextView
+                                    android:text="Home Delivery"
+                                    android:gravity="center"
+                                    android:textSize="10sp"
+                                    android:textColor="#333"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"/>
+                            </LinearLayout>
+
+                            <!-- Internet Packs -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+                                <ImageView
+                                    android:id="@+id/pointdeli"
+                                    android:contentDescription="Point Delivery"
+                                    android:src="@drawable/icon_pdeli"
+                                    android:background="@drawable/bg_unselected"
+                                    android:scaleType="centerInside"
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:padding="2dp"
+                                    android:layout_margin="2dp"/>
+
+                                <TextView
+                                    android:text="Point Delivery"
+                                    android:gravity="center"
+                                    android:textSize="10sp"
+                                    android:textColor="#333"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"/>
+                            </LinearLayout>
+
+                            <!-- Internet Packs -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal">
+
+                                <ImageView
+                                    android:id="@+id/h2hdeli"
+                                    android:contentDescription="Uri Delivery"
+                                    android:src="@drawable/icon_udeli"
+                                    android:background="@drawable/bg_unselected"
+                                    android:scaleType="centerInside"
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:padding="2dp"
+                                    android:layout_margin="2dp"/>
+
+                                <TextView
+                                    android:text="H2H Delivery"
+                                    android:gravity="center"
+                                    android:textSize="10sp"
+                                    android:textColor="#333"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"/>
+                            </LinearLayout>
+
+                        </GridLayout>
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="Recipient Info"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <EditText
+                                android:id="@+id/etReceiverName"
+                                android:hint="Receiver Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="12dp"
+                                android:inputType="textPersonName"
+                                android:drawableStart="@drawable/ic_account"
+                                android:padding="10dp"
+                                android:textSize="14sp"
+                                android:background="@drawable/rounded_edittext"
+                                android:layout_marginBottom="8dp"/>
+
+                            <EditText
+                                android:id="@+id/etReceiverMobile"
+                                android:hint="Receiver Mobile"
+                                android:drawablePadding="12dp"
+                                android:inputType="phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_call"
+                                android:padding="10dp"
+                                android:textSize="14sp"
+                                android:background="@drawable/rounded_edittext"
+                                android:layout_marginBottom="8dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:weightSum="2"
+                            android:gravity="center_vertical">
+
+                            <!-- Start Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="District"
+                                    android:textColor="#616161"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="4dp"/>
+
+                                <Spinner
+                                    android:id="@+id/DeliveryDistrict"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/spinner_background"
+                                    android:spinnerMode="dropdown"/>
+
+
+                            </LinearLayout>
+
+                            <!-- End Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginStart="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Thana"
+                                    android:textColor="#616161"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="4dp"/>
+
+                                <Spinner
+                                    android:id="@+id/DeliveryUpazila"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/spinner_background"
+                                    android:spinnerMode="dropdown"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <EditText
+                                android:id="@+id/etReceiverAddress"
+                                android:hint="Receiver Address"
+                                android:drawablePadding="12dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/ic_map"
+                                android:padding="10dp"
+                                android:textSize="14sp"
+                                android:background="@drawable/rounded_edittext" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="Parcel Info"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Parcel Type"
+                                    android:textColor="#616161"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="4dp"/>
+
+                                <Spinner
+                                    android:id="@+id/spinnerptypes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/spinner_background"
+                                    android:padding="12dp"
+                                    android:spinnerMode="dropdown"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:weightSum="2"
+                            android:gravity="center_vertical">
+
+                            <!-- Start Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="8dp">
+
+
+                                <EditText
+                                    android:id="@+id/etWeight"
+                                    android:hint="Weight (kg)"
+                                    android:inputType="numberDecimal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp"
+                                    android:textSize="14sp"
+                                    android:background="@drawable/spinner_background"
+                                    />
+                            </LinearLayout>
+
+                            <!-- End Point Spinner Section -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginStart="8dp">
+
+
+                                <EditText
+                                    android:id="@+id/etCod"
+                                    android:hint="COD Amount"
+                                    android:inputType="numberDecimal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp"
+                                    android:textSize="14sp"
+                                    android:background="@drawable/spinner_background"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <EditText
+                                android:id="@+id/etSenderNote"
+                                android:hint="Note:"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="12dp"
+                                android:drawableStart="@drawable/ic_note"
+                                android:padding="10dp"
+                                android:textSize="14sp"
+                                android:background="@drawable/rounded_edittext" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmitParcel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Parcel"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:backgroundTint="#086471"
+                android:paddingVertical="12dp"
+                android:layout_marginBottom="20dp"
+                style="@style/Widget.MaterialComponents.Button"
+                app:iconPadding="8dp"
+                app:elevation="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</RelativeLayout>

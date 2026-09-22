@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "388105491521",
+    "firebase_url": "https://projecturi-00360-default-rtdb.firebaseio.com",
+    "project_id": "projecturi-00360",
+    "storage_bucket": "projecturi-00360.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388105491521:android:52de107b3320bca6fd22c0",
+        "android_client_info": {
+          "package_name": "com.zerodevs.projecturi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmVXqR4GhW1raCPnBNNFi_Zsj_AOenntE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
